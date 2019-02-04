@@ -1,3 +1,5 @@
+###PRACTICE
+
 ############################################
 #Created by: Kaelin Saul
 #Date created: 1/27/2019
@@ -309,26 +311,6 @@ spp_count_plot <- ggplot(data = yearly_counts,
 
 grid.arrange(spp_weight_boxplot, spp_count_plot, ncol = 2, widths = c(4, 6))
 
-#Create a new plot called my_plot
-my_plot <- ggplot(data = yearly_sex_counts, 
-                  mapping = aes(x = year, y = n, color = sex)) +
-  geom_line() +
-  facet_wrap(~ species_id) +
-  labs(title = "Observed species in time",
-       x = "Year of observation",
-       y = "Number of individuals") +
-  theme_bw() +
-  theme(axis.text.x = element_text(colour = "grey20", size = 12, angle = 90, hjust = 0.5, vjust = 0.5),
-        axis.text.y = element_text(colour = "grey20", size = 12),
-        text=element_text(size = 16))
 
-#Save the plot using ggsave function.
-ggsave("fig_output/yearly_sex_counts.png", my_plot, width = 15, height = 10)
-
-# This also works for grid.arrange() plots
-combo_plot <- grid.arrange(spp_weight_boxplot, spp_count_plot, ncol = 2, widths = c(4, 6))
-
-#Save image using ggsave function.
-ggsave("fig_output/combo_plot_abun_weight.png", combo_plot, width = 10, dpi = 300)
 
 #####END OF CODE
