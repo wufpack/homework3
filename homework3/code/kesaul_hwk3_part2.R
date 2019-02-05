@@ -85,7 +85,6 @@ ggplot(data = nutrients, aes(x = Code_reorder, y = Total)) +
   ggtitle ("Nitrogen applied to land surface by source and state - 1987") +
   theme_bw() +
   theme(axis.text.x =
-          element_text(size  = 8)) +
-  ylim(0.0e+00, 8.0e+08)
+          element_text(size  = 8))
 
 ###END OF CODE
